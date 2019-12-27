@@ -98,9 +98,10 @@ jobs:
 
           # 编译x64固件:
           # cat >> .config <<EOF
-          # CONFIG_TARGET_x86=y
-          # CONFIG_TARGET_x86_64=y
-          # CONFIG_TARGET_x86_64_Generic=y
+            CONFIG_TARGET_BOARD="sunxi"
+            CONFIG_TARGET_SUBTARGET="cortexa53"
+            CONFIG_TARGET_PROFILE="DEVICE_sun50i-h5-nanopi-neo2"
+            CONFIG_TARGET_ARCH_PACKAGES="aarch64_cortex-a53"
           # EOF
 
           # 固件压缩:
